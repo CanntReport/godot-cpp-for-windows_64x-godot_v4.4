@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://fsdmgkkkfctv"]
+
+[sub_resource type="GDScript" id="GDScript_y32ns"]
+script/source = "extends Test
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	print(\"Hello world from godot\")
+	start_test()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Test" type="Test" parent="."]
+script = SubResource("GDScript_y32ns")

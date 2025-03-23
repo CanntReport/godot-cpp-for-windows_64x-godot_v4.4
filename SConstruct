@@ -5,8 +5,8 @@ import sys
 from methods import print_error
 
 
-libname = "EXTENSION-NAME"
-projectdir = "demo"
+libname = "gdgame" #编译后的动态库文件名（无后缀）
+projectdir = "demo" #游戏项目名
 
 localEnv = Environment(tools=["default"], PLATFORM="")
 

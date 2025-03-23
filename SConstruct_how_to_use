@@ -1,0 +1,14 @@
+首先，SConstruct文件是python库scons使用的文件，因此其中的代码使用python语言格式
+
+其次，Sconstruct文件中有3个基本函数
+
+program("file_name","file.cpp") #生成可执行程序
+StaticLibrary("file_name","file.cpp") #生成静态库
+ShardedLibrary("file_name","file.cpp") #生成动态链接库
+
+其中，file_name是将会输出的文件的名称，根据使用系统不同以及函数不同会带有不同的后缀，
+比如，在windows环境下使用ShardedLibrary()将会生成一个 file_name.dll
+
+windows环境下，三个函数分别生成的后缀为.exe/.lib/.dll
+
+在本环境下，你需要修改src文件夹下的c++文件，然后使用scons重新编译为动态库文件
